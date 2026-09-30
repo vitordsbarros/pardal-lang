@@ -1,0 +1,5 @@
+class Main {
+    void dizOla() {
+        printl("Olá, Mundo! Sintaxe limpa, moderna e orientada a objetos na linguagem Pardal.");
+    }
+}

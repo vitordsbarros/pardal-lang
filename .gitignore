@@ -1,0 +1,10 @@
+# Binários gerados
+bin/
+*.exe
+*.o
+*.out
+
+# Arquivos do sistema operacional e editores
+.vscode/
+.DS_Store
+Thumbs.db
