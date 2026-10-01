@@ -20,7 +20,6 @@ Pardal is a purely object-oriented, interpreted programming language implemented
 
 ```java
 class Main {
-
     void sayHello() {
         printl("Hello from a class method!");
     }
