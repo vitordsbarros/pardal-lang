@@ -52,7 +52,7 @@ These examples illustrate the intended syntax for supported declarations. Full p
 Clone the repository and enter its directory:
 
 ```bash
-git clone https://github.com/vitordsbarros/shawnLang.git
+git clone https://github.com/vitordsbarros/shawn-lang.git
 cd shawnLang
 ```
 
