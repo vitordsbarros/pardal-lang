@@ -1,0 +1,9 @@
+# Executaveis e arquivos compilados
+build/
+*.exe
+*.o
+*.out
+
+# Arquivos temporarios
+*.tmp
+*.log
