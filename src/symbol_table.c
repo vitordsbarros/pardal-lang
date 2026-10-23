@@ -137,3 +137,32 @@ int symbol_table_set_integer(SymbolTable *table, const char *name, long value)
 
     return 0;
 }
+
+int symbol_table_initialize_integer(
+    SymbolTable *table,
+    const char *name,
+    long value)
+{
+    if (table == NULL || name == NULL)
+    {
+        return 0;
+    }
+
+    for (int i = 0; i < table->count; i++)
+    {
+        Symbol *symbol = &table->symbols[i];
+
+        if (strcmp(symbol->name, name) == 0)
+        {
+            if (symbol->type != AST_TYPE_INT)
+            {
+                return 0;
+            }
+
+            symbol->integer_value = value;
+            return 1;
+        }
+    }
+
+    return 0;
+}

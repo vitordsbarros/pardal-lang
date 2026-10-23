@@ -6,7 +6,7 @@ BUILD_DIR = build
 
 COMMON_SRC = src/ast.c src/lexer.c src/parser.c src/semantic.c src/symbol_table.c
 
-TESTS = parser_test symbol_table_test ast_evaluate_test
+TESTS = parser_test symbol_table_test ast_evaluate_test semantic_test
 
 .PHONY: all test clean
 
@@ -27,10 +27,14 @@ $(BUILD_DIR)/symbol_table_test: $(COMMON_SRC) tests/symbol_table_test.c | $(BUIL
 $(BUILD_DIR)/ast_evaluate_test: src/ast.c tests/ast_evaluate_test.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) src/ast.c tests/ast_evaluate_test.c -o $@
 
+$(BUILD_DIR)/semantic_test: $(COMMON_SRC) tests/semantic_test.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) $(COMMON_SRC) tests/semantic_test.c -o $@
+
 test: $(addprefix $(BUILD_DIR)/,$(TESTS))
 	./$(BUILD_DIR)/parser_test
 	./$(BUILD_DIR)/symbol_table_test
 	./$(BUILD_DIR)/ast_evaluate_test
+	./$(BUILD_DIR)/semantic_test
 
 clean:
 	rm -rf $(BUILD_DIR)

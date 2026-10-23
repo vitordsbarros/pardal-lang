@@ -37,4 +37,9 @@ int symbol_table_set_integer(
     const char *name,
     long value);
 
+int symbol_table_initialize_integer(
+    SymbolTable *table,
+    const char *name,
+    long value);
+
 #endif
