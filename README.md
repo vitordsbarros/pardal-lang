@@ -99,7 +99,7 @@ shawnLang/
 - [ ] Integrate parsing, semantic analysis, and execution into a complete interpreter flow.
 - [ ] Expand runtime support for additional data types.
 - [ ] Improve syntax, semantic, and runtime error reporting.
-- [ ] Expand automated tests and documentation.
+- [x] Expand automated tests and documentation.
 
 ## Contributing
 
